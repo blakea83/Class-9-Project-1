@@ -1,0 +1,27 @@
+Course Project
+
+
+
+Shiny Application
+
+1) Create shiny app
+
+        d) must on the shiny website itself and not an external link
+2) create supporting documentation (what a use will need to get started on the application)
+        a) enough for a novice to understand
+3) Deploy to server
+        a) make sure it is to a http and not https site on Rpubs
+4) share the application link by pasting it into the text box below
+5) share your server.R and ui.R code on github
+
+
+
+
+Reproducible pitch presentation
+
+1) 5 slides to pitch our idea done on slidify 
+        a) 
+2) presntation pushed to github or Rpubs
+3) a link to your github presentation pasted below.
+
+
