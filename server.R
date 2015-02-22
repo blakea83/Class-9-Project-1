@@ -1,5 +1,5 @@
 library(shiny)
-
+library(devtools)
 library(UsingR)
 
 
@@ -35,15 +35,29 @@ shinyServer(
          # Acutal State Point Plot
                 plot(x=x_MLSS,y=y_GS, xlab='Mixed Liquor Suspended Solids (MLSS mg/L)',ylab="Settling Flux (GS) (lb/ft^2/day",main='State Point Graph',type="l")
                 points(SP_x,SP_y,col=2,lwd=10)  # State Point
-                lines(x=x_MLSS,y=OROL_Y,col=3,lwd=2)
-                lines(x=UROL_X,y=UROL_Y,col=4,lwd=2,lty=2)
+                lines(x=x_MLSS,y=OROL_Y,col=3,lwd=2) # Overflow Line
+                lines(x=UROL_X,y=UROL_Y,col=4,lwd=2,lty=2) # Underflow rate
                 legend(x=15,y=35,legend=c("Solids Flux Line","State Point","Overflow Rate","Underflow Rate"),col=c(1,2,3,4),lty=c(1,1,1,2),lwd=c(1,10,2,2))
                 
              
-          })     
-        }
-    
-        
+          })  
+     
+         output$overall<-renderImage({
+                 filename<-normalizePath(file.path('./1.jpeg'))
+                 list(src=filename)              
+         },deleteFile=FALSE)        
+
+         output$overall2<-renderImage({
+                 filename1<-normalizePath(file.path('.//2.jpg'))
+                 list(src=filename1)              
+         },deleteFile=FALSE)     
+         
+         output$overall3<-renderImage({
+                 filename1<-normalizePath(file.path('.//3.jpg'))
+                 list(src=filename1)              
+         },deleteFile=FALSE)  
+         
+        }       
 )
 
 
